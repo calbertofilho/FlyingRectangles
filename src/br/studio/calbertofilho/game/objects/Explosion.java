@@ -1,3 +1,4 @@
+package br.studio.calbertofilho.game.objects;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;

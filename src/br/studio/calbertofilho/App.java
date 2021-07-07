@@ -1,3 +1,5 @@
+package br.studio.calbertofilho;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,6 +11,8 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
+
+import br.studio.calbertofilho.game.Spawner;
 
 @SuppressWarnings("serial")
 public class App extends Canvas implements Runnable, MouseListener {
@@ -29,6 +33,7 @@ public class App extends Canvas implements Runnable, MouseListener {
 		running = true;
 		Dimension dimension = new Dimension(WIDTH, HEIGHT);
 		this.setPreferredSize(dimension);
+		this.setSize(dimension);
 		this.addMouseListener(this);
 		spawner = new Spawner(); 
 
@@ -95,16 +100,16 @@ public class App extends Canvas implements Runnable, MouseListener {
 	}
 
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void mouseReleased(MouseEvent e) {}
 
 	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void mouseClicked(MouseEvent e) {}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {}
+
+	@Override
+	public void mouseExited(MouseEvent e) {}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
@@ -115,26 +120,14 @@ public class App extends Canvas implements Runnable, MouseListener {
 
 	}
 
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public static void main(String[] args) throws Exception {
 
 		App game = new App();
 		JFrame window = new JFrame("Flying Rectangles v1.0");
 		window.add(game);
-		window.setLocationRelativeTo(null);
 		window.pack();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setLocationRelativeTo(null);
 		window.setVisible(true);
 
 		new Thread(game).start();

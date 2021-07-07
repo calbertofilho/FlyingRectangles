@@ -1,3 +1,4 @@
+package br.studio.calbertofilho.game.objects;
 import java.awt.Color;
 import java.awt.Rectangle;
 import java.util.Random;
