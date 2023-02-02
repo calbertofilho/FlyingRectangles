@@ -1,4 +1,4 @@
-# FlyingRectangles
+# FlyingRectangles #
 
 ## Getting Started
 Welcome to the Java world. Here is a guideline to help you get started to write Java code.
